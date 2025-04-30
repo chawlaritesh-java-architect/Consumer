@@ -1,0 +1,102 @@
+KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
+
+bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.properties
+
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-produced-spark-stream --bootstrap-server localhost:9092
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-from-spark-stream-A --bootstrap-server localhost:9092
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-from-spark-stream-B --bootstrap-server localhost:9092
+
+KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
+
+bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.properties
+
+bin/kafka-server-start.sh config/server.properties
+
+Create topics	bin/kafka-topics.sh --bootstrap-server <URL> --create --replication-factor 3 --partitions 4 --topic topic-name
+List all topics	bin/kafka-topics.sh --bootstrap-server <URL> --list
+Add a topic partition	bin/kafka-topics.sh --bootstrap-server <URL> --alter --topic <topic-name> --partitions 16
+
+Run a producer	bin/kafka-console-producer.sh --topic <topic-name> --broker-list <URL>
+
+Run a consumer	
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic fiserv-coforge-event-from-spark-stream-A
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic fiserv-coforge-event-produced-spark-stream
+
+Consume messages from the beginning	bin/kafka-console-consumer.sh --topic <topic-name> --bootstrap-server <URL> --group <group-name>--from-beginning
+
+Get information on a specific consumer group	bin/kafka-consumer-groups.sh --bootstrap-server <URL> --describe --group <group-name>
+Delete a consumer group	/bin/kafka-consumer-groups.sh --bootstrap-server <URL> --delete --group my-group --group <group-name>
+Reset the offset of a topic	bin/kafka-consumer-groups.sh --bootstrap-server <URL> --reset-offsets --group <group-name> --topic <topic-name> --to-earliest
+
+https://www.baeldung.com/kafka-spark-data-pipeline
+
+https://medium.com/expedia-group-tech/apache-spark-structured-streaming-first-streaming-example-1-of-6-e8f3219748ef
+
+https://medium.com/expedia-group-tech/apache-spark-structured-streaming-checkpoints-and-triggers-4-of-6-b6f15d5cfd8d
+https://medium.com/@shreyansh228.ss/snowflake-realtime-cdc-with-spark-connector-streams-and-tasks-1e7b75c97ddb
+
+https://medium.com/@shreyansh228.ss/snowflake-realtime-cdc-with-spark-connector-streams-and-tasks-1e7b75c97ddb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chawlaritesh.java.architect@riteshchawla.work
+
+AnjaliMyLove7257~
+
+AnjaliTakeCare230073#$
+
+AnjaliTakeCare230073~
+
+GodBlessYouShonaYashAkki1001.11**()
