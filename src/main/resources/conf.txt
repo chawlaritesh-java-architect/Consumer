@@ -1,0 +1,76 @@
+KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
+
+bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.properties
+
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-produced-spark-stream --bootstrap-server localhost:9092
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-from-spark-stream-A --bootstrap-server localhost:9092
+
+bin/kafka-topics.sh --create --topic fiserv-coforge-event-from-spark-stream-B --bootstrap-server localhost:9092
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chawlaritesh.java.architect@riteshchawla.work
+
+AnjaliMyLove7257~
+
+AnjaliTakeCare230073#$
+
+AnjaliTakeCare230073~
+
+GodBlessYouShonaYashAkki1001.11**()

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Bob",
+        "fee": 200,
+        "event_time": 1599993002991
+    },
+    {
+        "id": 2,
+        "name": "Alex",
+        "fee": 200,
+        "event_time": 1599993002991
+    },
+    {
+        "id": 3,
+        "name": "Raama",
+        "fee": 100,
+        "event_time": 1599993002991
+    }
+]
